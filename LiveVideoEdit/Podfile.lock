@@ -1,10 +1,10 @@
 PODS:
-  - SCRecorder (2.7.0)
+  - PBJVision (0.4.2)
 
 DEPENDENCIES:
-  - SCRecorder
+  - PBJVision
 
 SPEC CHECKSUMS:
-  SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+  PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
 
 COCOAPODS: 0.39.0
