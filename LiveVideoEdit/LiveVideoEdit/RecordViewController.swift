@@ -21,6 +21,12 @@ class RecordViewController: UIViewController {
     
     let assetLibrary = ALAssetsLibrary()
     
+    
+    
+    override func shouldAutorotate() -> Bool {
+       return !self.started
+    }
+    
     @IBAction func longPressPressed(gestureRecognizer: UILongPressGestureRecognizer) {
         
         switch (gestureRecognizer.state) {
