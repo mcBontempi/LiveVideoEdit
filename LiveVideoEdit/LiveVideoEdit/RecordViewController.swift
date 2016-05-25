@@ -21,10 +21,20 @@ class RecordViewController: UIViewController {
     
     let assetLibrary = ALAssetsLibrary()
     
-    
-    
     override func shouldAutorotate() -> Bool {
        return !self.started
+    }
+    
+    func colorBorder(color: UIColor) {
+
+              self.previewView.layer.borderColor = color.CGColor
+                
+                self.previewView.layer.borderWidth = 10
+}
+    
+    
+    func hideBorder() {
+          self.previewView.layer.borderWidth = 0
     }
     
     @IBAction func longPressPressed(gestureRecognizer: UILongPressGestureRecognizer) {
@@ -36,6 +46,9 @@ class RecordViewController: UIViewController {
                 self.recording = true
                 
                 PBJVision.sharedInstance().startVideoCapture()
+  
+                
+                self.colorBorder(UIColor(red: 0, green: 1, blue: 1, alpha: 1))
                 
                 print ("start")
                 
@@ -43,12 +56,16 @@ class RecordViewController: UIViewController {
             else {
                 
                 PBJVision.sharedInstance().resumeVideoCapture()
-           
+                self.colorBorder(UIColor(red: 0, green: 1, blue: 1, alpha: 1))
+                
                 print ("resume")
                 
             }
         case .Ended, .Cancelled, .Failed:
             PBJVision.sharedInstance().pauseVideoCapture()
+            
+            self.colorBorder(UIColor(red: 1, green: 0, blue: 0, alpha: 1))
+            
             
             print ("pause")
             
@@ -63,23 +80,18 @@ class RecordViewController: UIViewController {
     
     
     @IBAction func startStopPressed(sender: AnyObject) {
-        
         if self.started == false {
             self.started = true
-            
+            self.colorBorder(UIColor(red: 1, green: 0, blue: 0, alpha: 1))
             self.recordButton.hidden = false
-            
         }
         else {
-            
             PBJVision.sharedInstance().endVideoCapture()
             self.recording = false
         }
-        
     }
     
     @IBOutlet weak var previewView: UIView!
-    
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     func createPreviewView() {
