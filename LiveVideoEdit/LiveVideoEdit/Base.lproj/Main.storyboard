@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSB-xy-xpo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zge-6p-uAS">
                                 <rect key="frame" x="0.0" y="402" width="320" height="78"/>
                                 <subviews>
@@ -40,13 +44,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.12824253320000001" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JSB-xy-xpo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0SM-ve-Mlh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JSB-xy-xpo" secondAttribute="bottom" id="QWy-Ms-0RT"/>
+                            <constraint firstAttribute="trailing" secondItem="JSB-xy-xpo" secondAttribute="trailing" id="baM-Is-mRZ"/>
                             <constraint firstItem="Zge-6p-uAS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gpw-R4-Sum"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zge-6p-uAS" secondAttribute="bottom" id="gxG-lH-gzd"/>
+                            <constraint firstItem="JSB-xy-xpo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vrK-u8-duZ"/>
                             <constraint firstAttribute="trailing" secondItem="Zge-6p-uAS" secondAttribute="trailing" id="wIw-sF-1Rc"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="previewView" destination="JSB-xy-xpo" id="LTj-gn-SyT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

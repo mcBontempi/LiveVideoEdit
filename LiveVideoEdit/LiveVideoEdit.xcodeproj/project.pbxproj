@@ -1,447 +1,988 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		05E4BE198DED9394EC8AA5B3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85E4D4B77A48B4470DDF9F7 /* CoreTelephony.framework */; };
-		1A5082395E1D30C3C0EBBB69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F556D2B02F664846F3339 /* AVFoundation.framework */; };
-		3A6264A266F562E48AB7BF4D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF4EB2679055E65376ECBE4 /* CoreVideo.framework */; };
-		3C3D2FDDB5DDF4F4F6D32B56 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE18BF03B752F59DB5224185 /* BuddyBuildSDK.framework */; };
-		410969699C371F817D9A00A6 /* libPods-LiveVideoEdit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43203B8ECB4807EB9ECBE507 /* libPods-LiveVideoEdit.a */; };
-		7E1D7256F5F52D88F3EBEFFF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A51D40B0284F018BC165957 /* CoreText.framework */; };
-		A5D3C8ED3BF9E8407B21B477 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17983BF206BA0CD423D3693 /* SystemConfiguration.framework */; };
-		A75BDE491C853DD7F21D8852 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4502B2D280F8B1CC499BB79 /* CoreMedia.framework */; };
-		B4A7F1B3768F1B57F23CEBA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B12BF3A8A49681A43E4989 /* QuartzCore.framework */; };
-		D3B394AC8D1BC36B4767C9A4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02028DF53EA9BB59014C3EDC /* AssetsLibrary.framework */; };
-		D607B3A21CF4327B00B5C5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607B3A11CF4327B00B5C5FE /* AppDelegate.swift */; };
-		D607B3A41CF4327B00B5C5FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607B3A31CF4327B00B5C5FE /* ViewController.swift */; };
-		D607B3A71CF4327B00B5C5FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D607B3A51CF4327B00B5C5FE /* Main.storyboard */; };
-		D607B3AA1CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */; };
-		D607B3AC1CF4327B00B5C5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */; };
-		D607B3AF1CF4327B00B5C5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D607B3AD1CF4327B00B5C5FE /* LaunchScreen.storyboard */; };
-		D6840FAE1CF451C6007EE94C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6840FAD1CF451C6007EE94C /* RecordViewController.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		02028DF53EA9BB59014C3EDC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		1D4F556D2B02F664846F3339 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		43203B8ECB4807EB9ECBE507 /* libPods-LiveVideoEdit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiveVideoEdit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A51D40B0284F018BC165957 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		93B12BF3A8A49681A43E4989 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		97E09D4F35DE07ACE3377B3B /* Pods-LiveVideoEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveVideoEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit.release.xcconfig"; sourceTree = "<group>"; };
-		B4502B2D280F8B1CC499BB79 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		C85E4D4B77A48B4470DDF9F7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		CDD64F8F00DB23C36391FEEA /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		D17983BF206BA0CD423D3693 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D607B39E1CF4327B00B5C5FE /* LiveVideoEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveVideoEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D607B3A11CF4327B00B5C5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D607B3A31CF4327B00B5C5FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D607B3A61CF4327B00B5C5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D607B3A91CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LiveVideoEdit.xcdatamodel; sourceTree = "<group>"; };
-		D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D607B3AE1CF4327B00B5C5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D607B3B01CF4327B00B5C5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6840FAD1CF451C6007EE94C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		E5A26032E543A32E35BB7741 /* Pods-LiveVideoEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveVideoEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit.debug.xcconfig"; sourceTree = "<group>"; };
-		EFF4EB2679055E65376ECBE4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		FE18BF03B752F59DB5224185 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		D607B39B1CF4327B00B5C5FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C3D2FDDB5DDF4F4F6D32B56 /* BuddyBuildSDK.framework in Frameworks */,
-				D3B394AC8D1BC36B4767C9A4 /* AssetsLibrary.framework in Frameworks */,
-				7E1D7256F5F52D88F3EBEFFF /* CoreText.framework in Frameworks */,
-				05E4BE198DED9394EC8AA5B3 /* CoreTelephony.framework in Frameworks */,
-				A5D3C8ED3BF9E8407B21B477 /* SystemConfiguration.framework in Frameworks */,
-				B4A7F1B3768F1B57F23CEBA1 /* QuartzCore.framework in Frameworks */,
-				1A5082395E1D30C3C0EBBB69 /* AVFoundation.framework in Frameworks */,
-				A75BDE491C853DD7F21D8852 /* CoreMedia.framework in Frameworks */,
-				3A6264A266F562E48AB7BF4D /* CoreVideo.framework in Frameworks */,
-				410969699C371F817D9A00A6 /* libPods-LiveVideoEdit.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		5FA1894D17B6044AF75266C3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FE18BF03B752F59DB5224185 /* BuddyBuildSDK.framework */,
-				02028DF53EA9BB59014C3EDC /* AssetsLibrary.framework */,
-				4A51D40B0284F018BC165957 /* CoreText.framework */,
-				C85E4D4B77A48B4470DDF9F7 /* CoreTelephony.framework */,
-				D17983BF206BA0CD423D3693 /* SystemConfiguration.framework */,
-				93B12BF3A8A49681A43E4989 /* QuartzCore.framework */,
-				1D4F556D2B02F664846F3339 /* AVFoundation.framework */,
-				B4502B2D280F8B1CC499BB79 /* CoreMedia.framework */,
-				EFF4EB2679055E65376ECBE4 /* CoreVideo.framework */,
-				43203B8ECB4807EB9ECBE507 /* libPods-LiveVideoEdit.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AA78349844D5992B79EDDADD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E5A26032E543A32E35BB7741 /* Pods-LiveVideoEdit.debug.xcconfig */,
-				97E09D4F35DE07ACE3377B3B /* Pods-LiveVideoEdit.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D607B3951CF4327B00B5C5FE = {
-			isa = PBXGroup;
-			children = (
-				D607B3A01CF4327B00B5C5FE /* LiveVideoEdit */,
-				D607B39F1CF4327B00B5C5FE /* Products */,
-				5FA1894D17B6044AF75266C3 /* Frameworks */,
-				CDD64F8F00DB23C36391FEEA /* Bridging-Header.h */,
-				AA78349844D5992B79EDDADD /* Pods */,
-			);
-			sourceTree = "<group>";
-		};
-		D607B39F1CF4327B00B5C5FE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D607B39E1CF4327B00B5C5FE /* LiveVideoEdit.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D607B3A01CF4327B00B5C5FE /* LiveVideoEdit */ = {
-			isa = PBXGroup;
-			children = (
-				D607B3A11CF4327B00B5C5FE /* AppDelegate.swift */,
-				D607B3A31CF4327B00B5C5FE /* ViewController.swift */,
-				D607B3A51CF4327B00B5C5FE /* Main.storyboard */,
-				D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */,
-				D607B3AD1CF4327B00B5C5FE /* LaunchScreen.storyboard */,
-				D607B3B01CF4327B00B5C5FE /* Info.plist */,
-				D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */,
-				D6840FAD1CF451C6007EE94C /* RecordViewController.swift */,
-			);
-			path = LiveVideoEdit;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		D607B39D1CF4327B00B5C5FE /* LiveVideoEdit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D607B3B31CF4327B00B5C5FE /* Build configuration list for PBXNativeTarget "LiveVideoEdit" */;
-			buildPhases = (
-				74E9D396CAA5A2EAE636E640 /* Check Pods Manifest.lock */,
-				D607B39A1CF4327B00B5C5FE /* Sources */,
-				D607B39B1CF4327B00B5C5FE /* Frameworks */,
-				D607B39C1CF4327B00B5C5FE /* Resources */,
-				2A15095ABE282CF31687720F /* Embed Pods Frameworks */,
-				03CCB12E6F2B719E6FE0A3A2 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LiveVideoEdit;
-			productName = LiveVideoEdit;
-			productReference = D607B39E1CF4327B00B5C5FE /* LiveVideoEdit.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D607B3961CF4327B00B5C5FE /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = HolidayExtras;
-				TargetAttributes = {
-					D607B39D1CF4327B00B5C5FE = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 3U786KR73N;
-					};
-				};
-			};
-			buildConfigurationList = D607B3991CF4327B00B5C5FE /* Build configuration list for PBXProject "LiveVideoEdit" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = D607B3951CF4327B00B5C5FE;
-			productRefGroup = D607B39F1CF4327B00B5C5FE /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				D607B39D1CF4327B00B5C5FE /* LiveVideoEdit */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D607B39C1CF4327B00B5C5FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D607B3AF1CF4327B00B5C5FE /* LaunchScreen.storyboard in Resources */,
-				D607B3AC1CF4327B00B5C5FE /* Assets.xcassets in Resources */,
-				D607B3A71CF4327B00B5C5FE /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		03CCB12E6F2B719E6FE0A3A2 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2A15095ABE282CF31687720F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74E9D396CAA5A2EAE636E640 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D607B39A1CF4327B00B5C5FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D607B3A41CF4327B00B5C5FE /* ViewController.swift in Sources */,
-				D607B3A21CF4327B00B5C5FE /* AppDelegate.swift in Sources */,
-				D607B3AA1CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld in Sources */,
-				D6840FAE1CF451C6007EE94C /* RecordViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D607B3A51CF4327B00B5C5FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D607B3A61CF4327B00B5C5FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D607B3AD1CF4327B00B5C5FE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D607B3AE1CF4327B00B5C5FE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		D607B3B11CF4327B00B5C5FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D607B3B21CF4327B00B5C5FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D607B3B41CF4327B00B5C5FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5A26032E543A32E35BB7741 /* Pods-LiveVideoEdit.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = LiveVideoEdit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HolidayExtras.LiveVideoEdit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
-			};
-			name = Debug;
-		};
-		D607B3B51CF4327B00B5C5FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97E09D4F35DE07ACE3377B3B /* Pods-LiveVideoEdit.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = LiveVideoEdit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HolidayExtras.LiveVideoEdit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ad49c5d-43a7-49eb-ad04-c4b8356775b9";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		D607B3991CF4327B00B5C5FE /* Build configuration list for PBXProject "LiveVideoEdit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D607B3B11CF4327B00B5C5FE /* Debug */,
-				D607B3B21CF4327B00B5C5FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D607B3B31CF4327B00B5C5FE /* Build configuration list for PBXNativeTarget "LiveVideoEdit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D607B3B41CF4327B00B5C5FE /* Debug */,
-				D607B3B51CF4327B00B5C5FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D607B3A91CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodel */,
-			);
-			currentVersion = D607B3A91CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodel */;
-			path = LiveVideoEdit.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = D607B3961CF4327B00B5C5FE /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>02028DF53EA9BB59014C3EDC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AssetsLibrary.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AssetsLibrary.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>03CCB12E6F2B719E6FE0A3A2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>05E4BE198DED9394EC8AA5B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C85E4D4B77A48B4470DDF9F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1A5082395E1D30C3C0EBBB69</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1D4F556D2B02F664846F3339</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1D4F556D2B02F664846F3339</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AVFoundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AVFoundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>28AAE88C04AA969114482270</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_LiveVideoEdit.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2A15095ABE282CF31687720F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>30E1E9975A09E5838743D4E3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28AAE88C04AA969114482270</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3A6264A266F562E48AB7BF4D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFF4EB2679055E65376ECBE4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3C3D2FDDB5DDF4F4F6D32B56</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FE18BF03B752F59DB5224185</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4A51D40B0284F018BC165957</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreText.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreText.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>5FA1894D17B6044AF75266C3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FE18BF03B752F59DB5224185</string>
+				<string>02028DF53EA9BB59014C3EDC</string>
+				<string>4A51D40B0284F018BC165957</string>
+				<string>C85E4D4B77A48B4470DDF9F7</string>
+				<string>D17983BF206BA0CD423D3693</string>
+				<string>93B12BF3A8A49681A43E4989</string>
+				<string>1D4F556D2B02F664846F3339</string>
+				<string>B4502B2D280F8B1CC499BB79</string>
+				<string>EFF4EB2679055E65376ECBE4</string>
+				<string>28AAE88C04AA969114482270</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>74E9D396CAA5A2EAE636E640</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>7E1D7256F5F52D88F3EBEFFF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4A51D40B0284F018BC165957</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>93B12BF3A8A49681A43E4989</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>97E09D4F35DE07ACE3377B3B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LiveVideoEdit.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5D3C8ED3BF9E8407B21B477</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D17983BF206BA0CD423D3693</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A75BDE491C853DD7F21D8852</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B4502B2D280F8B1CC499BB79</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AA78349844D5992B79EDDADD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E5A26032E543A32E35BB7741</string>
+				<string>97E09D4F35DE07ACE3377B3B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B4502B2D280F8B1CC499BB79</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreMedia.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreMedia.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>B4A7F1B3768F1B57F23CEBA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>93B12BF3A8A49681A43E4989</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C85E4D4B77A48B4470DDF9F7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreTelephony.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreTelephony.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CDD64F8F00DB23C36391FEEA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D17983BF206BA0CD423D3693</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SystemConfiguration.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/SystemConfiguration.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>D3B394AC8D1BC36B4767C9A4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>02028DF53EA9BB59014C3EDC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D607B3951CF4327B00B5C5FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D607B3A01CF4327B00B5C5FE</string>
+				<string>D607B39F1CF4327B00B5C5FE</string>
+				<string>5FA1894D17B6044AF75266C3</string>
+				<string>CDD64F8F00DB23C36391FEEA</string>
+				<string>AA78349844D5992B79EDDADD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3961CF4327B00B5C5FE</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>HolidayExtras</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>D607B39D1CF4327B00B5C5FE</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>3U786KR73N</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>D607B3991CF4327B00B5C5FE</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>D607B3951CF4327B00B5C5FE</string>
+			<key>productRefGroup</key>
+			<string>D607B39F1CF4327B00B5C5FE</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>D607B39D1CF4327B00B5C5FE</string>
+			</array>
+		</dict>
+		<key>D607B3991CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D607B3B11CF4327B00B5C5FE</string>
+				<string>D607B3B21CF4327B00B5C5FE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D607B39A1CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D607B3A21CF4327B00B5C5FE</string>
+				<string>D607B3AA1CF4327B00B5C5FE</string>
+				<string>D6840FAE1CF451C6007EE94C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D607B39B1CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3C3D2FDDB5DDF4F4F6D32B56</string>
+				<string>D3B394AC8D1BC36B4767C9A4</string>
+				<string>7E1D7256F5F52D88F3EBEFFF</string>
+				<string>05E4BE198DED9394EC8AA5B3</string>
+				<string>A5D3C8ED3BF9E8407B21B477</string>
+				<string>B4A7F1B3768F1B57F23CEBA1</string>
+				<string>1A5082395E1D30C3C0EBBB69</string>
+				<string>A75BDE491C853DD7F21D8852</string>
+				<string>3A6264A266F562E48AB7BF4D</string>
+				<string>30E1E9975A09E5838743D4E3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D607B39C1CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D607B3AF1CF4327B00B5C5FE</string>
+				<string>D607B3AC1CF4327B00B5C5FE</string>
+				<string>D607B3A71CF4327B00B5C5FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D607B39D1CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D607B3B31CF4327B00B5C5FE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>74E9D396CAA5A2EAE636E640</string>
+				<string>D607B39A1CF4327B00B5C5FE</string>
+				<string>D607B39B1CF4327B00B5C5FE</string>
+				<string>D607B39C1CF4327B00B5C5FE</string>
+				<string>2A15095ABE282CF31687720F</string>
+				<string>03CCB12E6F2B719E6FE0A3A2</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LiveVideoEdit</string>
+			<key>productName</key>
+			<string>LiveVideoEdit</string>
+			<key>productReference</key>
+			<string>D607B39E1CF4327B00B5C5FE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>D607B39E1CF4327B00B5C5FE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LiveVideoEdit.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D607B39F1CF4327B00B5C5FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D607B39E1CF4327B00B5C5FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3A01CF4327B00B5C5FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D607B3A11CF4327B00B5C5FE</string>
+				<string>D607B3A51CF4327B00B5C5FE</string>
+				<string>D607B3AB1CF4327B00B5C5FE</string>
+				<string>D607B3AD1CF4327B00B5C5FE</string>
+				<string>D607B3B01CF4327B00B5C5FE</string>
+				<string>D607B3A81CF4327B00B5C5FE</string>
+				<string>D6840FAD1CF451C6007EE94C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LiveVideoEdit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3A11CF4327B00B5C5FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3A21CF4327B00B5C5FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D607B3A11CF4327B00B5C5FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D607B3A51CF4327B00B5C5FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D607B3A61CF4327B00B5C5FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3A61CF4327B00B5C5FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3A71CF4327B00B5C5FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D607B3A51CF4327B00B5C5FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D607B3A81CF4327B00B5C5FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D607B3A91CF4327B00B5C5FE</string>
+			</array>
+			<key>currentVersion</key>
+			<string>D607B3A91CF4327B00B5C5FE</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>LiveVideoEdit.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>D607B3A91CF4327B00B5C5FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>LiveVideoEdit.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3AA1CF4327B00B5C5FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D607B3A81CF4327B00B5C5FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D607B3AB1CF4327B00B5C5FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3AC1CF4327B00B5C5FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D607B3AB1CF4327B00B5C5FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D607B3AD1CF4327B00B5C5FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D607B3AE1CF4327B00B5C5FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3AE1CF4327B00B5C5FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3AF1CF4327B00B5C5FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D607B3AD1CF4327B00B5C5FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D607B3B01CF4327B00B5C5FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D607B3B11CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D607B3B21CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D607B3B31CF4327B00B5C5FE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D607B3B41CF4327B00B5C5FE</string>
+				<string>D607B3B51CF4327B00B5C5FE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D607B3B41CF4327B00B5C5FE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E5A26032E543A32E35BB7741</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>LiveVideoEdit/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.HolidayExtras.LiveVideoEdit</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D607B3B51CF4327B00B5C5FE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>97E09D4F35DE07ACE3377B3B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>LiveVideoEdit/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.HolidayExtras.LiveVideoEdit</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string>9ad49c5d-43a7-49eb-ad04-c4b8356775b9</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D6840FAD1CF451C6007EE94C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RecordViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D6840FAE1CF451C6007EE94C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D6840FAD1CF451C6007EE94C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E5A26032E543A32E35BB7741</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LiveVideoEdit.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFF4EB2679055E65376ECBE4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreVideo.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreVideo.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>FE18BF03B752F59DB5224185</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>BuddyBuildSDK.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D607B3961CF4327B00B5C5FE</string>
+</dict>
+</plist>
