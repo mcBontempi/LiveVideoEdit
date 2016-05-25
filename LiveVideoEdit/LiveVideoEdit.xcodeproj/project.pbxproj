@@ -23,6 +23,7 @@
 		D607B3AA1CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */; };
 		D607B3AC1CF4327B00B5C5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */; };
 		D607B3AF1CF4327B00B5C5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D607B3AD1CF4327B00B5C5FE /* LaunchScreen.storyboard */; };
+		D6840FAE1CF451C6007EE94C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6840FAD1CF451C6007EE94C /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D607B3AE1CF4327B00B5C5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D607B3B01CF4327B00B5C5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6840FAD1CF451C6007EE94C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		E5A26032E543A32E35BB7741 /* Pods-LiveVideoEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveVideoEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF4EB2679055E65376ECBE4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		FE18BF03B752F59DB5224185 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D607B3AD1CF4327B00B5C5FE /* LaunchScreen.storyboard */,
 				D607B3B01CF4327B00B5C5FE /* Info.plist */,
 				D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */,
+				D6840FAD1CF451C6007EE94C /* RecordViewController.swift */,
 			);
 			path = LiveVideoEdit;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				D607B3A41CF4327B00B5C5FE /* ViewController.swift in Sources */,
 				D607B3A21CF4327B00B5C5FE /* AppDelegate.swift in Sources */,
 				D607B3AA1CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld in Sources */,
+				D6840FAE1CF451C6007EE94C /* RecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +383,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HolidayExtras.LiveVideoEdit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ad49c5d-43a7-49eb-ad04-c4b8356775b9";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
