@@ -25,21 +25,45 @@
                                 <rect key="frame" x="0.0" y="402" width="320" height="78"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8T-oO-I81">
-                                        <rect key="frame" x="128" y="7" width="64" height="64"/>
+                                        <rect key="frame" x="249" y="7" width="64" height="64"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="rCW-eQ-L1p"/>
                                             <constraint firstAttribute="width" constant="64" id="yfF-VY-giZ"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="startStopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qvw-bO-ngn"/>
+                                        </connections>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-yX-Oyb">
+                                        <rect key="frame" x="7" y="7" width="64" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="w8K-hr-5Qv"/>
+                                            <constraint firstAttribute="width" constant="64" id="wXC-1k-zkb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nif-dA-1Wr" appends="YES" id="1us-9C-Jjt"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="HHA-yX-Oyb" firstAttribute="leading" secondItem="Zge-6p-uAS" secondAttribute="leading" constant="7" id="Cik-sf-KrF"/>
+                                    <constraint firstAttribute="bottom" secondItem="HHA-yX-Oyb" secondAttribute="bottom" constant="7" id="Jgm-9Q-lpm"/>
                                     <constraint firstItem="N8T-oO-I81" firstAttribute="centerY" secondItem="Zge-6p-uAS" secondAttribute="centerY" id="TEV-wu-eBT"/>
                                     <constraint firstItem="N8T-oO-I81" firstAttribute="centerX" secondItem="Zge-6p-uAS" secondAttribute="centerX" id="cV5-L9-w1a"/>
+                                    <constraint firstAttribute="trailing" secondItem="N8T-oO-I81" secondAttribute="trailing" constant="7" id="eZe-UY-S7o"/>
+                                    <constraint firstItem="HHA-yX-Oyb" firstAttribute="top" secondItem="Zge-6p-uAS" secondAttribute="top" constant="7" id="hhL-vs-PgG"/>
                                     <constraint firstAttribute="height" constant="78" id="qEa-bD-dgf"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cV5-L9-w1a"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.12824253320000001" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,11 +81,38 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="previewView" destination="JSB-xy-xpo" id="LTj-gn-SyT"/>
+                        <outlet property="recordButton" destination="HHA-yX-Oyb" id="QDE-SE-0df"/>
+                        <outlet property="startStopButton" destination="N8T-oO-I81" id="j5y-M3-mzA"/>
+                        <segue destination="qye-5B-0fC" kind="presentation" identifier="previewSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="doM-V0-eJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nif-dA-1Wr">
+                    <connections>
+                        <action selector="longPressPressed:" destination="BYZ-38-t0r" id="2mE-LM-Us4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="358" y="317"/>
+            <point key="canvasLocation" x="-102" y="243"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XEa-WP-R8B">
+            <objects>
+                <viewController id="qye-5B-0fC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aFp-sO-fYE"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Os-7M-YyN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dt0-FT-TGD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYe-CN-MKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="240"/>
         </scene>
     </scenes>
 </document>
