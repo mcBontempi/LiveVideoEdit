@@ -82,7 +82,7 @@
                         <outlet property="previewView" destination="JSB-xy-xpo" id="LTj-gn-SyT"/>
                         <outlet property="recordButton" destination="HHA-yX-Oyb" id="QDE-SE-0df"/>
                         <outlet property="startStopButton" destination="N8T-oO-I81" id="j5y-M3-mzA"/>
-                        <segue destination="qye-5B-0fC" kind="presentation" identifier="previewSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="doM-V0-eJX"/>
+                        <segue destination="sN1-ep-dAl" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xXL-u3-FZb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,24 +94,13 @@
             </objects>
             <point key="canvasLocation" x="-102" y="243"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="XEa-WP-R8B">
+        <!--AV Player View Controller-->
+        <scene sceneID="JU9-Xf-1R7">
             <objects>
-                <viewController id="qye-5B-0fC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aFp-sO-fYE"/>
-                        <viewControllerLayoutGuide type="bottom" id="9Os-7M-YyN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dt0-FT-TGD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hYe-CN-MKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="sN1-ep-dAl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISF-T9-Vgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="240"/>
+            <point key="canvasLocation" x="1034" y="1015"/>
         </scene>
     </scenes>
 </document>

@@ -167,15 +167,7 @@ extension RecordViewController : PBJVisionDelegate {
                         
                 })
             }
-            
-            
-            
-            
-            
-            
         }
-        
-        
     }
 }
 
