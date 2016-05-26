@@ -22,6 +22,8 @@
 		D607B3AA1CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */; };
 		D607B3AC1CF4327B00B5C5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */; };
 		D607B3AF1CF4327B00B5C5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D607B3AD1CF4327B00B5C5FE /* LaunchScreen.storyboard */; };
+		D626C62D1CF728CB001C672D /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D626C62C1CF728CB001C672D /* PlaybackViewController.swift */; };
+		D626C62F1CF72916001C672D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626C62E1CF72916001C672D /* AVKit.framework */; };
 		D6840FAE1CF451C6007EE94C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6840FAD1CF451C6007EE94C /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		D607B3AB1CF4327B00B5C5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D607B3AE1CF4327B00B5C5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D607B3B01CF4327B00B5C5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D626C62C1CF728CB001C672D /* PlaybackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
+		D626C62E1CF72916001C672D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		D6840FAD1CF451C6007EE94C /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		E5A26032E543A32E35BB7741 /* Pods-LiveVideoEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveVideoEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveVideoEdit/Pods-LiveVideoEdit.debug.xcconfig"; sourceTree = "<group>"; };
 		EFF4EB2679055E65376ECBE4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D626C62F1CF72916001C672D /* AVKit.framework in Frameworks */,
 				3C3D2FDDB5DDF4F4F6D32B56 /* BuddyBuildSDK.framework in Frameworks */,
 				D3B394AC8D1BC36B4767C9A4 /* AssetsLibrary.framework in Frameworks */,
 				7E1D7256F5F52D88F3EBEFFF /* CoreText.framework in Frameworks */,
@@ -73,6 +78,7 @@
 		5FA1894D17B6044AF75266C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D626C62E1CF72916001C672D /* AVKit.framework */,
 				FE18BF03B752F59DB5224185 /* BuddyBuildSDK.framework */,
 				02028DF53EA9BB59014C3EDC /* AssetsLibrary.framework */,
 				4A51D40B0284F018BC165957 /* CoreText.framework */,
@@ -125,6 +131,7 @@
 				D607B3B01CF4327B00B5C5FE /* Info.plist */,
 				D607B3A81CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld */,
 				D6840FAD1CF451C6007EE94C /* RecordViewController.swift */,
+				D626C62C1CF728CB001C672D /* PlaybackViewController.swift */,
 			);
 			path = LiveVideoEdit;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D626C62D1CF728CB001C672D /* PlaybackViewController.swift in Sources */,
 				D607B3A21CF4327B00B5C5FE /* AppDelegate.swift in Sources */,
 				D607B3AA1CF4327B00B5C5FE /* LiveVideoEdit.xcdatamodeld in Sources */,
 				D6840FAE1CF451C6007EE94C /* RecordViewController.swift in Sources */,

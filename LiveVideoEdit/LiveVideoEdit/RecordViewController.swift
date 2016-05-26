@@ -13,6 +13,9 @@ import AssetsLibrary
 
 class RecordViewController: UIViewController {
     
+    
+    var urlToPass:NSURL!
+    
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var recordButton: UIView!
     
@@ -87,20 +90,13 @@ class RecordViewController: UIViewController {
         self.createPreviewView()
         PBJVision.sharedInstance().startPreview()
         
-        
         let vision = PBJVision.sharedInstance()
-        
         
         vision.cameraMode = .Video;
         vision.focusMode = .AutoFocus;
         vision.outputFormat = .Standard;
         vision.videoRenderingEnabled = true;
-        //  vision.additionalCompressionProperties = @{AVVideoProfileLevelKey : AVVideoProfileLevelH264Baseline30};
-        
-        
-        
-        
-        
+        vision.additionalCompressionProperties = [AVVideoProfileLevelKey : AVVideoProfileLevelH264HighAutoLevel]
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -139,6 +135,15 @@ class RecordViewController: UIViewController {
         super.viewDidLayoutSubviews()
         self.updatePreviewLayer()
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let playbackViewController = segue.destinationViewController as! PlaybackViewController
+        
+        playbackViewController.url = urlToPass
+    }
+    
 }
 
 extension RecordViewController : PBJVisionDelegate {
@@ -147,16 +152,19 @@ extension RecordViewController : PBJVisionDelegate {
         
         if let videoPath = videoDict![PBJVisionVideoPathKey] as? String {
             
-            let videoURL = NSURL(string: videoPath)
+            let videoURL = NSURL(fileURLWithPath: videoPath)
             
-            self.assetLibrary.writeVideoAtPathToSavedPhotosAlbum(videoURL) { (url , error) in
+        //    self.assetLibrary.writeVideoAtPathToSavedPhotosAlbum(videoURL) { (url , error) in
                 
-                //   self.performSegueWithIdentifier("previewSegue", sender: nil)
+                
+                self.urlToPass = videoURL
+                
+                self.performSegueWithIdentifier("playbackSegue", sender: nil)
                 self.hideBorder()
                 self.recordButton.hidden = true
                 
                 self.started = false
-                
+              /*
                 let vc = UIAlertController(title: "Video Operation", message: "Video Saved", preferredStyle: .Alert)
                 
                 vc.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
@@ -166,7 +174,9 @@ extension RecordViewController : PBJVisionDelegate {
                         
                         
                 })
-            }
+ 
+ */
+        //    }
         }
     }
 }
