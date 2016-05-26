@@ -15,74 +15,52 @@ class RecordViewController: UIViewController {
     
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var recordButton: UIView!
-  
+    
     var started:Bool = false
     var recording:Bool = false
     
     let assetLibrary = ALAssetsLibrary()
     
     override func shouldAutorotate() -> Bool {
-       return !self.started
+        return !self.started
     }
     
     func colorBorder(color: UIColor) {
-
-              self.previewView.layer.borderColor = color.CGColor
-                
-                self.previewView.layer.borderWidth = 10
-}
-    
+        self.previewView.layer.borderColor = color.CGColor
+        self.previewView.layer.borderWidth = 10
+    }
     
     func hideBorder() {
-          self.previewView.layer.borderWidth = 0
+        self.previewView.layer.borderWidth = 0
     }
     
     @IBAction func longPressPressed(gestureRecognizer: UILongPressGestureRecognizer) {
-        
         switch (gestureRecognizer.state) {
         case .Began:
             if self.recording == false {
-                
                 self.recording = true
-                
                 PBJVision.sharedInstance().startVideoCapture()
-  
-                
-                self.colorBorder(UIColor(red: 0, green: 1, blue: 1, alpha: 1))
-                
+                self.colorBorder(UIColor.redColor())
                 print ("start")
-                
             }
             else {
-                
                 PBJVision.sharedInstance().resumeVideoCapture()
-                self.colorBorder(UIColor(red: 0, green: 1, blue: 1, alpha: 1))
-                
+                self.colorBorder(UIColor.redColor())
                 print ("resume")
-                
             }
         case .Ended, .Cancelled, .Failed:
             PBJVision.sharedInstance().pauseVideoCapture()
-            
-            self.colorBorder(UIColor(red: 1, green: 0, blue: 0, alpha: 1))
-            
-            
+            self.colorBorder(UIColor.yellowColor())
             print ("pause")
-            
         default:
             break;
         }
     }
     
-    
-    
-    
-    
-    
     @IBAction func startStopPressed(sender: AnyObject) {
         if self.started == false {
             self.started = true
-            self.colorBorder(UIColor(red: 1, green: 0, blue: 0, alpha: 1))
+            self.colorBorder(UIColor.yellowColor())
             self.recordButton.hidden = false
         }
         else {
@@ -117,7 +95,7 @@ class RecordViewController: UIViewController {
         vision.focusMode = .AutoFocus;
         vision.outputFormat = .Standard;
         vision.videoRenderingEnabled = true;
-      //  vision.additionalCompressionProperties = @{AVVideoProfileLevelKey : AVVideoProfileLevelH264Baseline30};
+        //  vision.additionalCompressionProperties = @{AVVideoProfileLevelKey : AVVideoProfileLevelH264Baseline30};
         
         
         
@@ -161,51 +139,39 @@ class RecordViewController: UIViewController {
         super.viewDidLayoutSubviews()
         self.updatePreviewLayer()
     }
-    
-    
-    /*
-    
-    func vision(PBJVision *)vision capturedVideo:(NSDictionary *)videoDict error:(NSError *)error
-    {
-    _recording = NO;
-    
-    if (error && [error.domain isEqual:PBJVisionErrorDomain] && error.code == PBJVisionErrorCancelled) {
-    NSLog(@"recording session cancelled");
-    return;
-    } else if (error) {
-    NSLog(@"encounted an error in video capture (%@)", error);
-    return;
-    }
-    
-    _currentVideo = videoDict;
-    
-    NSString *videoPath = [_currentVideo  objectForKey:PBJVisionVideoPathKey];
-    [_assetLibrary writeVideoAtPathToSavedPhotosAlbum:[NSURL URLWithString:videoPath] completionBlock:^(NSURL *assetURL, NSError *error1) {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Video Saved!" message: @"Saved to the camera roll."
-    delegate:self
-    cancelButtonTitle:nil
-    otherButtonTitles:@"OK", nil];
-    [alert show];
-    }];
-    }
-
-
-    */
-    
-    
 }
 
 extension RecordViewController : PBJVisionDelegate {
     func vision(vision: PBJVision, capturedVideo videoDict: [NSObject : AnyObject]?, error: NSError?) {
-  
         
-        let videoPath = videoDict![PBJVisionVideoPathKey] as! String
         
-        let videoURL = NSURL(string: videoPath)
-        
-        self.assetLibrary.writeVideoAtPathToSavedPhotosAlbum(videoURL) { (url , error) in
+        if let videoPath = videoDict![PBJVisionVideoPathKey] as? String {
             
-            self.performSegueWithIdentifier("previewSegue", sender: nil)
+            let videoURL = NSURL(string: videoPath)
+            
+            self.assetLibrary.writeVideoAtPathToSavedPhotosAlbum(videoURL) { (url , error) in
+                
+                //   self.performSegueWithIdentifier("previewSegue", sender: nil)
+                self.hideBorder()
+                self.recordButton.hidden = true
+                
+                self.started = false
+                
+                let vc = UIAlertController(title: "Video Operation", message: "Video Saved", preferredStyle: .Alert)
+                
+                vc.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                
+                self.presentViewController(vc
+                    , animated: true, completion: {
+                        
+                        
+                })
+            }
+            
+            
+            
+            
+            
             
         }
         
