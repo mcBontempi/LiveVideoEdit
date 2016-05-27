@@ -29,7 +29,8 @@ class RecordViewController: UIViewController {
     
     func colorBorder(color: UIColor) {
         self.previewView.layer.borderColor = color.CGColor
-        self.previewView.layer.borderWidth = 10
+        self.previewView.layer.borderWidth = 4
+        
     }
     
     func hideBorder() {
