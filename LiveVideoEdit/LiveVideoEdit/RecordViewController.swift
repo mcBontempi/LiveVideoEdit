@@ -109,7 +109,7 @@ class RecordViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+        self.animatedToOrientation(self.interfaceOrientation)
         
         
    
@@ -119,12 +119,12 @@ class RecordViewController: UIViewController {
         return false
     }
     
-    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+    func animatedToOrientation(interfaceOrientation: UIInterfaceOrientation) {
         
         let vision = PBJVision.sharedInstance()
         var visionOrientation:PBJCameraOrientation?
         
-        switch(toInterfaceOrientation) {
+        switch(interfaceOrientation) {
         case .Unknown:
             visionOrientation =  .Portrait
         case .Portrait:
@@ -137,6 +137,14 @@ class RecordViewController: UIViewController {
             visionOrientation = .LandscapeRight
         }
         vision.cameraOrientation = visionOrientation!
+        
+    }
+    
+    
+    
+    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        self.animatedToOrientation(toInterfaceOrientation)
+        
     }
     
     func updatePreviewLayer() {
