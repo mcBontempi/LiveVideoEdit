@@ -8,7 +8,6 @@
 
 import UIKit
 import PBJVision
-import AssetsLibrary
 
 
 class RecordViewController: UIViewController {
@@ -22,7 +21,6 @@ class RecordViewController: UIViewController {
     var started:Bool = false
     var recording:Bool = false
     
-    let assetLibrary = ALAssetsLibrary()
     
     override func shouldAutorotate() -> Bool {
         return !self.started
@@ -93,10 +91,23 @@ class RecordViewController: UIViewController {
         let vision = PBJVision.sharedInstance()
         
         vision.cameraMode = .Video;
-        vision.focusMode = .AutoFocus;
-        vision.outputFormat = .Standard;
+        vision.focusMode = .ContinuousAutoFocus;
+        vision.outputFormat = .Square;
         vision.videoRenderingEnabled = true;
         vision.additionalCompressionProperties = [AVVideoProfileLevelKey : AVVideoProfileLevelH264HighAutoLevel]
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        //    PBJVision.sharedInstance().startVideoCapture()
+        //    PBJVision.sharedInstance().pauseVideoCapture()
+        }
+        
+   
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -149,13 +160,13 @@ class RecordViewController: UIViewController {
 extension RecordViewController : PBJVisionDelegate {
     func vision(vision: PBJVision, capturedVideo videoDict: [NSObject : AnyObject]?, error: NSError?) {
         
+        if videoDict != nil {
         
         if let videoPath = videoDict![PBJVisionVideoPathKey] as? String {
             
             let videoURL = NSURL(fileURLWithPath: videoPath)
             
-        //    self.assetLibrary.writeVideoAtPathToSavedPhotosAlbum(videoURL) { (url , error) in
-                
+            
                 
                 self.urlToPass = videoURL
                 
@@ -164,20 +175,8 @@ extension RecordViewController : PBJVisionDelegate {
                 self.recordButton.hidden = true
                 
                 self.started = false
-              /*
-                let vc = UIAlertController(title: "Video Operation", message: "Video Saved", preferredStyle: .Alert)
-                
-                vc.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                
-                self.presentViewController(vc
-                    , animated: true, completion: {
-                        
-                        
-                })
- 
- */
-        //    }
         }
+    }
     }
 }
 
