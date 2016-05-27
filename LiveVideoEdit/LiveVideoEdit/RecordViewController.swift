@@ -99,20 +99,20 @@ class RecordViewController: UIViewController {
         
         let vision = PBJVision.sharedInstance()
         
+        vision.captureSessionPreset = AVCaptureSessionPreset1920x1080
+        
+        
         vision.cameraMode = .Video;
         vision.focusMode = .ContinuousAutoFocus;
-        vision.outputFormat = .Preset;
+     //   vision.outputFormat = .Preset;
         vision.videoRenderingEnabled = true;
-        vision.additionalCompressionProperties = [AVVideoProfileLevelKey : AVVideoProfileLevelH264HighAutoLevel]
+      //  vision.additionalCompressionProperties = [AVVideoProfileLevelKey : AVVideoProfileLevelH264HighAutoLevel]
+     //   vision.videoBitRate = PBJVideoBitRate1920x1080
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         self.animatedToOrientation(self.interfaceOrientation)
-        
-        
-   
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -137,7 +137,6 @@ class RecordViewController: UIViewController {
             visionOrientation = .LandscapeRight
         }
         vision.cameraOrientation = visionOrientation!
-        
     }
     
     
