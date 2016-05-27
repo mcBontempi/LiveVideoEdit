@@ -27,12 +27,9 @@ class PlaybackViewController: UIViewController {
     var playerLayer:AVPlayerLayer!
     var player:AVPlayer!
     
-    
-    
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         self.player = AVPlayer(URL: url)
         self.playerLayer = AVPlayerLayer(player: self.player)
         self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
@@ -44,15 +41,11 @@ class PlaybackViewController: UIViewController {
         
         
         for button in [self.playButton, self.shareButton, self.backButton] {
-            self.customizeButton(button)
+        self.customizeButton(button)
         
         self.bounceView(button, delay: 0.2, alpha: 1.0)
         
         }
-        
-        
-        
-        
     }
     
     func playerDidFinishPlaying(note: NSNotification) {
@@ -110,7 +103,7 @@ class PlaybackViewController: UIViewController {
     
     
     func customizeButton(button:UIButton) {
-        button.layer.cornerRadius = 50
+        button.layer.cornerRadius = 32
         button.layer.borderColor = UIColor.blackColor().CGColor
         button.layer.borderWidth = 3
     }
@@ -146,7 +139,7 @@ class PlaybackViewController: UIViewController {
             view.transform = CGAffineTransformMakeScale(0.9, 0.9)
             UIView.animateWithDuration(2.0,
                                        delay: 0,
-                                       usingSpringWithDamping: 0.9,
+                                       usingSpringWithDamping: 3.9,
                                        initialSpringVelocity: 6.0,
                                        options: UIViewAnimationOptions.AllowUserInteraction,
                                        animations: {

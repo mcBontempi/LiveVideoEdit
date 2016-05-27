@@ -26,7 +26,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8T-oO-I81">
                                         <rect key="frame" x="249" y="7" width="64" height="64"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="rCW-eQ-L1p"/>
                                             <constraint firstAttribute="width" constant="64" id="yfF-VY-giZ"/>
@@ -37,7 +37,7 @@
                                     </button>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-yX-Oyb">
                                         <rect key="frame" x="7" y="7" width="64" height="64"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="w8K-hr-5Qv"/>
@@ -110,12 +110,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVm-v3-i2F">
-                                <rect key="frame" x="40" y="190" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYd-du-iRE">
+                                <rect key="frame" x="58" y="396" width="64" height="64"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.8980392157" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="n2v-mX-mOo"/>
-                                    <constraint firstAttribute="width" constant="100" id="r7W-OG-rCo"/>
+                                    <constraint firstAttribute="height" constant="64" id="Wx4-a9-La6"/>
+                                    <constraint firstAttribute="width" constant="64" id="f3L-6f-GCd"/>
+                                </constraints>
+                                <state key="normal" image="back-arrow-circular-symbol"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="sAk-xS-mzp" eventType="touchUpInside" id="CS5-LK-bKz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVm-v3-i2F">
+                                <rect key="frame" x="128" y="396" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.8980392157" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="n2v-mX-mOo"/>
+                                    <constraint firstAttribute="width" constant="64" id="r7W-OG-rCo"/>
                                 </constraints>
                                 <state key="normal" image="play-button"/>
                                 <connections>
@@ -123,43 +135,43 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNO-PG-g5w">
-                                <rect key="frame" x="180" y="190" width="100" height="100"/>
+                                <rect key="frame" x="198" y="396" width="64" height="64"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.8980392157" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="dof-Zo-cHp"/>
-                                    <constraint firstAttribute="height" constant="100" id="h2H-87-GVp"/>
+                                    <constraint firstAttribute="width" constant="64" id="dof-Zo-cHp"/>
+                                    <constraint firstAttribute="height" constant="64" id="h2H-87-GVp"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="share"/>
                                 <connections>
                                     <action selector="sharePressed:" destination="sAk-xS-mzp" eventType="touchUpInside" id="44t-3a-0rq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYd-du-iRE">
-                                <rect key="frame" x="12" y="12" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.8980392157" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Wx4-a9-La6"/>
-                                    <constraint firstAttribute="width" constant="100" id="f3L-6f-GCd"/>
-                                </constraints>
-                                <state key="normal" image="back-arrow-circular-symbol"/>
-                                <connections>
-                                    <action selector="backPressed:" destination="sAk-xS-mzp" eventType="touchUpInside" id="CS5-LK-bKz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pNO-PG-g5w" firstAttribute="centerY" secondItem="2cZ-Mp-sTz" secondAttribute="centerY" id="3g0-9H-5e7"/>
+                            <constraint firstItem="NuO-XL-0j5" firstAttribute="top" secondItem="BYd-du-iRE" secondAttribute="bottom" constant="20" id="4iv-KD-Rdb"/>
                             <constraint firstItem="GTK-zf-NK7" firstAttribute="leading" secondItem="2cZ-Mp-sTz" secondAttribute="leading" id="Mtk-qL-TDT"/>
                             <constraint firstItem="GTK-zf-NK7" firstAttribute="top" secondItem="2cZ-Mp-sTz" secondAttribute="top" id="NhI-aI-Ofj"/>
-                            <constraint firstItem="BYd-du-iRE" firstAttribute="top" secondItem="2cZ-Mp-sTz" secondAttribute="top" constant="12" id="Vf2-kU-rJI"/>
-                            <constraint firstItem="BYd-du-iRE" firstAttribute="leading" secondItem="2cZ-Mp-sTz" secondAttribute="leading" constant="12" id="Yj0-8f-LdA"/>
                             <constraint firstAttribute="trailing" secondItem="GTK-zf-NK7" secondAttribute="trailing" id="Z1N-zh-V5Q"/>
+                            <constraint firstItem="NuO-XL-0j5" firstAttribute="top" secondItem="pNO-PG-g5w" secondAttribute="bottom" constant="20" id="ZaD-s1-HOL"/>
+                            <constraint firstItem="BVm-v3-i2F" firstAttribute="top" secondItem="BYd-du-iRE" secondAttribute="bottom" constant="20" id="ao9-tR-Wen"/>
+                            <constraint firstItem="NuO-XL-0j5" firstAttribute="top" secondItem="BVm-v3-i2F" secondAttribute="bottom" constant="20" id="bh4-Hn-FUl"/>
                             <constraint firstItem="BVm-v3-i2F" firstAttribute="centerY" secondItem="2cZ-Mp-sTz" secondAttribute="centerY" id="blj-cf-dLN"/>
-                            <constraint firstItem="BVm-v3-i2F" firstAttribute="centerX" secondItem="2cZ-Mp-sTz" secondAttribute="centerX" constant="-70" id="eSp-XN-qQP"/>
+                            <constraint firstItem="BVm-v3-i2F" firstAttribute="centerX" secondItem="2cZ-Mp-sTz" secondAttribute="centerX" id="eSp-XN-qQP"/>
                             <constraint firstItem="NuO-XL-0j5" firstAttribute="top" secondItem="GTK-zf-NK7" secondAttribute="bottom" id="fg0-Ac-g14"/>
+                            <constraint firstItem="BYd-du-iRE" firstAttribute="centerX" secondItem="2cZ-Mp-sTz" secondAttribute="centerX" constant="-70" id="m4n-RM-eOz"/>
+                            <constraint firstItem="BYd-du-iRE" firstAttribute="centerX" secondItem="GTK-zf-NK7" secondAttribute="centerX" constant="-70" id="n7O-hM-cRw"/>
                             <constraint firstItem="pNO-PG-g5w" firstAttribute="centerX" secondItem="2cZ-Mp-sTz" secondAttribute="centerX" constant="70" id="nBE-cC-WAm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="n7O-hM-cRw"/>
+                                <exclude reference="ao9-tR-Wen"/>
+                                <exclude reference="blj-cf-dLN"/>
+                                <exclude reference="3g0-9H-5e7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="BYd-du-iRE" id="4bM-kJ-j0L"/>

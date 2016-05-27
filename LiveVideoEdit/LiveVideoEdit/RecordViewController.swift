@@ -13,6 +13,9 @@ import PBJVision
 class RecordViewController: UIViewController {
     
     
+    
+    
+    
     var urlToPass:NSURL!
     
     @IBOutlet weak var startStopButton: UIButton!
@@ -41,17 +44,17 @@ class RecordViewController: UIViewController {
             if self.recording == false {
                 self.recording = true
                 PBJVision.sharedInstance().startVideoCapture()
-                self.colorBorder(UIColor.redColor())
+                self.colorBorder(UIColor.blueColor())
                 print ("start")
             }
             else {
                 PBJVision.sharedInstance().resumeVideoCapture()
-                self.colorBorder(UIColor.redColor())
+                self.colorBorder(UIColor.blueColor())
                 print ("resume")
             }
         case .Ended, .Cancelled, .Failed:
             PBJVision.sharedInstance().pauseVideoCapture()
-            self.colorBorder(UIColor.yellowColor())
+            self.colorBorder(UIColor.redColor())
             print ("pause")
         default:
             break;
@@ -70,7 +73,7 @@ class RecordViewController: UIViewController {
 
                 self.recording = true
                 self.started = true
-                self.colorBorder(UIColor.yellowColor())
+                self.colorBorder(UIColor.redColor())
                 self.recordButton.hidden = false
    }
         else {
@@ -90,6 +93,13 @@ class RecordViewController: UIViewController {
         self.previewView.layer.addSublayer(self.previewLayer)
     }
     
+    func roundASquareViewOff(view:UIView) {
+        
+        let sideLength = view.frame.size.height
+        view.layer.cornerRadius = sideLength/2
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,13 +111,13 @@ class RecordViewController: UIViewController {
         
         vision.captureSessionPreset = AVCaptureSessionPreset1920x1080
         
-        
         vision.cameraMode = .Video;
         vision.focusMode = .ContinuousAutoFocus;
-     //   vision.outputFormat = .Preset;
         vision.videoRenderingEnabled = true;
-      //  vision.additionalCompressionProperties = [AVVideoProfileLevelKey : AVVideoProfileLevelH264HighAutoLevel]
-     //   vision.videoBitRate = PBJVideoBitRate1920x1080
+        
+        
+        self.roundASquareViewOff(self.recordButton)
+        self.roundASquareViewOff(self.startStopButton)
     }
     
     override func viewDidAppear(animated: Bool) {
