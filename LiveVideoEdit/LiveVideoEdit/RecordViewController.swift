@@ -60,10 +60,19 @@ class RecordViewController: UIViewController {
     
     @IBAction func startStopPressed(sender: AnyObject) {
         if self.started == false {
-            self.started = true
-            self.colorBorder(UIColor.yellowColor())
-            self.recordButton.hidden = false
-        }
+            
+            self.view.userInteractionEnabled = false
+            
+            PBJVision.sharedInstance().startVideoCapture()
+                PBJVision.sharedInstance().pauseVideoCapture()
+                
+                self.view.userInteractionEnabled = true
+
+                self.recording = true
+                self.started = true
+                self.colorBorder(UIColor.yellowColor())
+                self.recordButton.hidden = false
+   }
         else {
             PBJVision.sharedInstance().endVideoCapture()
             self.recording = false
@@ -92,7 +101,7 @@ class RecordViewController: UIViewController {
         
         vision.cameraMode = .Video;
         vision.focusMode = .ContinuousAutoFocus;
-        vision.outputFormat = .Square;
+        vision.outputFormat = .Preset;
         vision.videoRenderingEnabled = true;
         vision.additionalCompressionProperties = [AVVideoProfileLevelKey : AVVideoProfileLevelH264HighAutoLevel]
     }
@@ -101,11 +110,7 @@ class RecordViewController: UIViewController {
         super.viewDidAppear(animated)
         
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-        //    PBJVision.sharedInstance().startVideoCapture()
-        //    PBJVision.sharedInstance().pauseVideoCapture()
-        }
+        
         
    
     }
