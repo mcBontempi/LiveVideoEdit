@@ -1,10 +1,13 @@
 PODS:
+  - LSRepeater (0.0.11)
   - PBJVision (0.4.2)
 
 DEPENDENCIES:
+  - LSRepeater
   - PBJVision
 
 SPEC CHECKSUMS:
+  LSRepeater: a595bb0e043612c7a23a636654a5875f2c229aa4
   PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
 
 COCOAPODS: 0.39.0

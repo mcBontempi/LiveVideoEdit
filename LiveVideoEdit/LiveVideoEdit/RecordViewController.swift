@@ -12,10 +12,6 @@ import PBJVision
 
 class RecordViewController: UIViewController {
     
-    
-    
-    
-    
     var urlToPass:NSURL!
     
     @IBOutlet weak var startStopButton: UIButton!
