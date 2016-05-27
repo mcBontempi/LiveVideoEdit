@@ -8,10 +8,11 @@
 
 import UIKit
 import PBJVision
-
+import LSRepeater
 
 class RecordViewController: UIViewController {
     
+    @IBOutlet weak var timeLabel: UILabel!
     var urlToPass:NSURL!
     
     @IBOutlet weak var startStopButton: UIButton!
@@ -20,6 +21,7 @@ class RecordViewController: UIViewController {
     var started:Bool = false
     var recording:Bool = false
     
+    var repeater: LSRepeater!
     
     override func shouldAutorotate() -> Bool {
         return !self.started
@@ -114,11 +116,30 @@ class RecordViewController: UIViewController {
         
         self.roundASquareViewOff(self.recordButton)
         self.roundASquareViewOff(self.startStopButton)
+        
+        self.repeater = LSRepeater.repeater(0.01, execute: {
+            let vision = PBJVision.sharedInstance()
+            
+            var capturedSeconds = vision.capturedVideoSeconds
+            
+            if capturedSeconds < 0 {
+                capturedSeconds = 0
+            }
+            
+            self.timeLabel.hidden = !self.started
+            
+            self.timeLabel.text = String(format: "%.01f", capturedSeconds)
+        })
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.animatedToOrientation(self.interfaceOrientation)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+      //  PBJVision.sharedInstance().cancelVideoCapture()
     }
     
     override func prefersStatusBarHidden() -> Bool {
